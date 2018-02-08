@@ -2,23 +2,22 @@ console.log('App.js is running!');
 
 const app = {
   title: 'Visibility Toggle',
-  options: []
+  state: true
 };
 
 const toggleButton = document.getElementById('toggle-button');
 
-let state = true;
-
-const toggle = (state) => {
-  state = !state;
-  console.log(state, "state2");
+const toggle = () => {
+  app.state = !app.state;
+  renderOptions();
 };
 
 const renderOptions = () => {
   const template = (
     <div>
       <h1>{app.title}</h1>
-      <button id="toggle-button" onClick={toggle}>{state===true ? "Show Details" : "Hide Details"}</button>
+      <button id="toggle-button" onClick={toggle}>{app.state===true ? "Show Details" : "Hide Details"}</button>
+      {app.state === false ? <p>Some details here</p> : null}
     </div>
   );
 

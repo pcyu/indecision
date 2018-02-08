@@ -4,16 +4,14 @@ console.log('App.js is running!');
 
 var app = {
   title: 'Visibility Toggle',
-  options: []
+  state: true
 };
 
 var toggleButton = document.getElementById('toggle-button');
 
-var state = true;
-
-var toggle = function toggle(state) {
-  state = !state;
-  console.log(state, "state2");
+var toggle = function toggle() {
+  app.state = !app.state;
+  renderOptions();
 };
 
 var renderOptions = function renderOptions() {
@@ -28,8 +26,13 @@ var renderOptions = function renderOptions() {
     React.createElement(
       'button',
       { id: 'toggle-button', onClick: toggle },
-      state === true ? "Show Details" : "Hide Details"
-    )
+      app.state === true ? "Show Details" : "Hide Details"
+    ),
+    app.state === false ? React.createElement(
+      'p',
+      null,
+      'Some details here'
+    ) : null
   );
 
   ReactDOM.render(template, appRoot);
