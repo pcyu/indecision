@@ -1,44 +1,43 @@
 console.log('App.js is running!');
 
-var app = {
+const app = {
   title: 'Indecision App',
   subtitle: 'Put your life in the hands of a computer',
-  options: ['One', 'Two']
+  options: []
 };
 
-var template = (
-  <div>
-    <h1>{app.title}</h1>
-    {app.subtitle && <p>{app.subtitle}</p>}
-    <p>{app.options && app.options.length > 0 ? "Here are your options" : "No options"} </p>
-    <ol>
-      <li>Item one</li>
-      <li>Item two</li>
-    </ol>
-  </div>
-);
+const onFormSubmit = (e) => {
+  e.preventDefault();
 
-var user = {
-  name: 'Andrew',
-  age: 20,
-  location: 'New York'
-};
+  const option = e.target.elements.option.value;
 
-function getLocation(location) {
-  if (location) {
-    return <p>Location: {location}</p>
+  if (option) {
+    app.options.push(option);
+    e.target.elements.option.value = '';
+    renderOptions();
   }
-}
+};
 
-var templateTwo = (
-  <div>
-    <h1>{user.name ? user.name : 'Anonymous'}</h1>
-    {(user.age && user.age >= 18) && <p>Age: {user.age}</p> }
-    {getLocation(user.location)}
-  </div>
-);
-
-var appRoot = document.getElementById('app');
+const renderOptions = () => {
+  const template = (
+    <div>
+      <h1>{app.title}</h1>
+      {app.subtitle && <p>{app.subtitle}</p>}
+      <p>{app.options && app.options.length > 0 ? "Here are your options" : "No options"} </p>
+      <p>{app.options.length}</p>
+      <ol>
+        <li>Item one</li>
+        <li>Item two</li>
+      </ol>
+      <form onSubmit={onFormSubmit}>
+        <input type="text" name="option" />
+        <button>Add Option</button>
+      </form>
+    </div>
+  );
+  const appRoot = document.getElementById('app');
 
 ReactDOM.render(template, appRoot);
-// ReactDOM.render(templateTwo, appRoot);
+}
+
+renderOptions();
