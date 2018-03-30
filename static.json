@@ -1,0 +1,6 @@
+{
+  "root": "indecision-app/",
+  "routes": {
+    "/**": "index.html"
+  }
+}
