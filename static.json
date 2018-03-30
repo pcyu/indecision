@@ -1,5 +1,5 @@
 {
-  "root": "indecision-app/",
+  "root": "indecision-app/public",
   "routes": {
     "/**": "index.html"
   }
