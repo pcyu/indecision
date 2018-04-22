@@ -28,7 +28,7 @@
     "webpack-dev-server": "2.5.1"
   },
   "scripts": {
-    "start": "node src/server.js",
+    "start": "node server/server.js",
     "server": "live-server public/",
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
