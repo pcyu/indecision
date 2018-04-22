@@ -13,6 +13,7 @@
     "babel-preset-env": "1.5.2",
     "babel-preset-react": "6.24.1",
     "css-loader": "0.28.4",
+    "express": "4.15.4",
     "extract-text-webpack-plugin": "^3.0.2",
     "live-server": "^1.2.0",
     "node-sass": "^4.7.2",
@@ -27,7 +28,7 @@
     "webpack-dev-server": "2.5.1"
   },
   "scripts": {
-    "start": "node src/app.js",
+    "start": "node src/server.js",
     "server": "live-server public/",
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
