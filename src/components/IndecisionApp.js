@@ -64,7 +64,7 @@ class IndecisionApp extends React.Component {
     console.log('component will unmount');
   };
   render() {
-    const subtitle = 'Put your life in the hands of a computer.'
+    const subtitle = 'Randomized High Intense Interval Training'
     return (
       <div>
         <Header subtitle={subtitle}/>
