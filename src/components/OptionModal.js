@@ -11,6 +11,7 @@ const OptionModal = (props) => (
   >
     <h3 className="modal__title">Selected Option</h3>
     {props.selectedOption && <p className="modal__body">{props.selectedOption}</p>}
+    {props.selectedOption2 && <p className="modal__body">{props.selectedOption2}</p>}
     <button className="button" onClick={props.exitModal}>Okay</button>
   </Modal>
 );
