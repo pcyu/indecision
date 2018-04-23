@@ -25,14 +25,14 @@ class IndecisionApp extends React.Component {
     const newState = this.state.options.filter((items) => option !== items);
     const secondrandomNum = Math.floor(Math.random() * newState.length);
     const secondOption = newState[secondrandomNum];
-    console.log(option);
-    console.log(secondOption);
-    // console.log(newState, 'newstate');
-    // console.log(this.state);
-    this.setState(() => ({ selectedOption: option, selectedOption2: secondOption}));
+    this.setState(() => ({ 
+      selectedOption: option, 
+      selectedOption2: secondOption,
+      options: this.state.options.filter((items) => option !== items && secondOption !== items)
+    }));
   };
   exitModal = () => {
-    this.setState(() => ({ selectedOption: undefined}));
+    this.setState(() => ({ selectedOption: undefined, selectedOption2: undefined}));
   };
   handleAddOption = (option) => {
     if (!option) {
