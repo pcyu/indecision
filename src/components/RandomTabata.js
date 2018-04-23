@@ -5,7 +5,7 @@ import Header from './Header';
 import Action from './Action';
 import OptionModal from './OptionModal';
 
-class IndecisionApp extends React.Component {
+class RandomTabata extends React.Component {
   state = {
     options: [],
     selectedOption: undefined,
@@ -36,9 +36,9 @@ class IndecisionApp extends React.Component {
   };
   handleAddOption = (option) => {
     if (!option) {
-      return 'Enter valid value to add item';
+      return 'Please enter an exercise option.';
     } else if (this.state.options.indexOf(option) > -1) {
-      return 'This option already exists';
+      return 'This exercise already exists.';
     }
     this.setState((prevState) => ({options: prevState.options.concat(option)}));
   };
@@ -94,4 +94,4 @@ class IndecisionApp extends React.Component {
   }
 }
 
-export default IndecisionApp;
+export default RandomTabata;

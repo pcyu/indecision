@@ -1,4 +1,4 @@
-class IndecisionApp extends React.Component {
+class RandomTabata extends React.Component {
   constructor(props) {
     super(props);
     this.handleDeleteOptions = this.handleDeleteOptions.bind(this);
@@ -173,4 +173,4 @@ class AddOption extends React.Component{
 //   );
 // };
 
-ReactDOM.render(<IndecisionApp />, document.getElementById('app'));
+ReactDOM.render(<RandomTabata />, document.getElementById('app'));
