@@ -2,7 +2,7 @@
   "name": "random-tabata",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/pcyu/indecision.git",
+  "repository": "https://github.com/pcyu/random-tabata.git",
   "author": "Peter Yu <PeterYu@gmail.com>",
   "license": "MIT",
   "dependencies": {
