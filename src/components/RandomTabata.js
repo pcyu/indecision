@@ -64,7 +64,7 @@ class RandomTabata extends React.Component {
     console.log('component will unmount');
   };
   render() {
-    const subtitle = 'Randomized High Intense Interval Training'
+    const subtitle = 'Randomized High-Intensity Interval Training'
     return (
       <div>
         <Header subtitle={subtitle}/>
