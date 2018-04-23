@@ -70,7 +70,7 @@ class IndecisionApp extends React.Component {
         <Header subtitle={subtitle}/>
         <div className="container">
           <Action 
-          hasOptions={this.state.options.length > 0}
+          hasOptions={this.state.options.length > 1}
           handlePick={this.handlePick} 
           />
           <div className="widget">
