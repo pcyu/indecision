@@ -23,7 +23,8 @@
   outline: none;
   padding: $l-size;
   text-align: center;
-  width: 25%;
+  min-width: 25%;
+  max-width: 50%;
 }
 
 .modal__title {
