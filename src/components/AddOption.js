@@ -6,9 +6,8 @@ export default class AddOption extends React.Component {
   };
   handleAddOption = (e) => {
     e.preventDefault();
-    const option = e.target.elements.option.value.toLowerCase().split(' ').map((word) => word[0].toUpperCase() + word.substr(1)).join().trim();
+    const option = e.target.elements.option.value.split(' ').map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(' ').trim();
     const error = this.props.handleAddOption(option);
-
     this.setState(() =>({error}));
     
     if (!error) {
