@@ -10,7 +10,7 @@ class RandomTabata extends React.Component {
     options: [],
     selectedOption: undefined,
     selectedOption2: undefined,
-    time: 250
+    time: 0
   };
   handleDeleteOptions = () => {
     this.setState(() => ({ options: [] }));
@@ -29,20 +29,23 @@ class RandomTabata extends React.Component {
     this.setState(() => ({ 
       selectedOption: option, 
       selectedOption2: secondOption,
-      options: this.state.options.filter((items) => option !== items && secondOption !== items)
+      options: this.state.options.filter((items) => option !== items && secondOption !== items),
+      time: 250
     }));
   };
   exitModal = () => {
-    this.setState(() => ({ selectedOption: undefined, selectedOption2: undefined, time: 250}));
+    clearInterval(this.timer);
+    this.setState(() => ({ selectedOption: undefined, selectedOption2: undefined}));
   };
   startTabata = () => {
     const tabataCircuit = () => {
       this.setState((prevState) => ({
         time: prevState.time - 1
       }))
-      console.log(this.state.time);
+      // console.log(this.state.time);
     };
-    setInterval(tabataCircuit.bind(this), 1000);
+    this.timer = setInterval(tabataCircuit.bind(this), 1000)
+    setTimeout(() => { this.exitModal()}, 250000);
   };
   handleAddOption = (option) => {
     if (!option) {

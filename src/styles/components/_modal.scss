@@ -20,8 +20,7 @@
 .modal {
   background: $light-blue;
   color: white;
-  height: 60%;
-  width: 90%;
+  max-width: 30rem;
   outline: none;
   padding: $l-size;
   text-align: center;
