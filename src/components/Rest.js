@@ -25,7 +25,15 @@ export default class Rest extends React.Component {
   render() {
     return (
       <div>
-        <p>{this.state.timeLeft > 0 ? this.state.timeLeft : 0}</p>
+        <p>
+        {
+          this.state.timeLeft > 9 
+          ? 
+          '0:' + this.state.timeLeft
+          :
+          '0:0' + this.state.timeLeft
+        }
+        </p>
       </div>
     );
   }

@@ -35,6 +35,7 @@ class RandomTabata extends React.Component {
   };
   exitModal = () => {
     clearInterval(this.timer);
+    clearTimeout(this.timedExit);
     this.setState(() => ({ selectedOption: undefined, selectedOption2: undefined}));
   };
   startTabata = () => {
@@ -42,10 +43,10 @@ class RandomTabata extends React.Component {
       this.setState((prevState) => ({
         time: prevState.time - 1
       }))
-      // console.log(this.state.time);
+      console.log(this.state.time);
     };
     this.timer = setInterval(tabataCircuit.bind(this), 1000)
-    setTimeout(() => { this.exitModal()}, 250000);
+    this.timedExit = setTimeout(() => { this.exitModal()}, 245000);
   };
   handleAddOption = (option) => {
     if (!option) {

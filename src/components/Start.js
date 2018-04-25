@@ -1,10 +1,10 @@
 import React from 'react';
 
-export default class Interval extends React.Component {
+export default class Start extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      timeLeft: 20
+      timeLeft: 5
     }
   }
 
@@ -25,15 +25,7 @@ export default class Interval extends React.Component {
   render() {
     return (
       <div>
-        <p>
-        {
-          this.state.timeLeft > 9 
-          ? 
-          '0:' + this.state.timeLeft 
-          :
-          '0:0' + this.state.timeLeft
-        }
-        </p>
+        <p>{'0:0' + this.state.timeLeft}</p>
       </div>
     );
   }
