@@ -1,8 +1,9 @@
 import React from 'react';
+import Sound from 'react-sound';
 import Modal from 'react-modal';
 import Rest from './Rest';
-import Interval from './Interval';
 import Start from './Start';
+import Interval from './Interval';
 
 const OptionModal = (props) => (
   <Modal
@@ -22,13 +23,21 @@ const OptionModal = (props) => (
       </div> 
       :
       props.time > 240 ?
-      <div> 
+      <div>
+        <Sound 
+          url="audio/ready.mp3"
+          playStatus={Sound.status.PLAYING}
+        /> 
         <p className="modal__body">Get Ready to Start!</p>
         <Start />
       </div>
       :
       props.time > 220 ?
       <div>
+        <Sound 
+          url="audio/go.mp3"
+          playStatus={Sound.status.PLAYING}
+        /> 
         <p className="modal__body">{props.selectedOption}</p>
         <Interval />
       </div>
@@ -41,6 +50,10 @@ const OptionModal = (props) => (
       :
       props.time > 190 ?
       <div>
+        <Sound 
+          url="audio/go.mp3"
+          playStatus={Sound.status.PLAYING}
+        /> 
         <p className="modal__body">{props.selectedOption2}</p>
         <Interval /> 
       </div>
@@ -53,6 +66,10 @@ const OptionModal = (props) => (
       :
       props.time > 160 ?
       <div>
+        <Sound 
+          url="audio/go.mp3"
+          playStatus={Sound.status.PLAYING}
+        /> 
         <p className="modal__body">{props.selectedOption}</p>
         <Interval /> 
       </div>
@@ -65,6 +82,10 @@ const OptionModal = (props) => (
       :
       props.time > 130 ?
       <div>
+        <Sound 
+          url="audio/go.mp3"
+          playStatus={Sound.status.PLAYING}
+        /> 
         <p className="modal__body">{props.selectedOption2}</p>
         <Interval /> 
       </div>
@@ -77,6 +98,10 @@ const OptionModal = (props) => (
       :
       props.time > 100 ?
       <div>
+        <Sound 
+          url="audio/go.mp3"
+          playStatus={Sound.status.PLAYING}
+        /> 
         <p className="modal__body">{props.selectedOption}</p>
         <Interval /> 
       </div>
@@ -89,6 +114,10 @@ const OptionModal = (props) => (
       :
       props.time > 70 ?
       <div>
+        <Sound 
+          url="audio/go.mp3"
+          playStatus={Sound.status.PLAYING}
+        /> 
         <p className="modal__body">{props.selectedOption2}</p>
         <Interval /> 
       </div>
@@ -101,6 +130,10 @@ const OptionModal = (props) => (
       :
       props.time > 40 ?
       <div>
+        <Sound 
+          url="audio/go.mp3"
+          playStatus={Sound.status.PLAYING}
+        /> 
         <p className="modal__body">{props.selectedOption}</p>
         <Interval /> 
       </div>
@@ -113,6 +146,10 @@ const OptionModal = (props) => (
       :
       props.time > 10 ?
       <div>
+        <Sound 
+          url="audio/go.mp3"
+          playStatus={Sound.status.PLAYING}
+        /> 
         <p className="modal__body">{props.selectedOption2}</p>
         <Interval /> 
       </div>
