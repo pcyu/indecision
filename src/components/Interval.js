@@ -25,7 +25,7 @@ export default class Interval extends React.Component {
   render() {
     return (
       <div>
-        <p>
+        <p className = 'modal__timer'>
         {
           this.state.timeLeft > 9 
           ? 

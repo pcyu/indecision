@@ -43,7 +43,7 @@ class RandomTabata extends React.Component {
       this.setState((prevState) => ({
         time: prevState.time - 1
       }))
-      console.log(this.state.time);
+      // console.log(this.state.time);
     };
     this.timer = setInterval(tabataCircuit.bind(this), 1000)
     this.timedExit = setTimeout(() => { this.exitModal()}, 245000);
