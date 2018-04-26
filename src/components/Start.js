@@ -24,8 +24,8 @@ export default class Start extends React.Component {
 
   render() {
     return (
-      <div>
-      <p className = 'modal__timer'>{'0:0' + this.state.timeLeft}</p>
+      <div className= 'grid__timer'>
+        <p className = 'modal__timer'>{'0:0' + this.state.timeLeft}</p>
       </div>
     );
   }
