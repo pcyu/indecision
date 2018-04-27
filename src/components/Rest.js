@@ -24,8 +24,8 @@ export default class Rest extends React.Component {
 
   render() {
     return (
-      <div className= 'grid__timer'>
-        <p className = 'modal__timer'>
+      <div className= 'modal__timer'>
+        <p>
         {
           this.state.timeLeft > 9 
           ? 
