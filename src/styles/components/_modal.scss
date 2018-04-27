@@ -28,10 +28,12 @@
 }
 
 .modal__title {
+  flex-direction: column;
   margin: 0 0 $m-size 0;
 }
 
 .modal__body {
+  flex-direction: column;
   font-size: 2rem;
   font-weight: 300;
   margin: 0 0 $l-size 0;
@@ -39,23 +41,25 @@
 }
 
 .modal__timer {
+  flex-direction: column;
   font-size: 2rem;
-  grid-column: 2;
 }
 
 .modal__set {
+  flex-direction: column;
   font-size: 3rem;
 }
 
+
 ///
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr; 
-  grid-template-rows: 1fr 1fr 1fr;
-}
+// .grid {
+//   display: grid;
+//   grid-template-columns: 1fr 1fr 1fr; 
+//   grid-template-rows: 1fr 1fr 1fr;
+// }
 
-.grid__timer {
-  grid-column-start: 2;
-  grid-column-end: 3;
-}
+// .grid__timer {
+//   grid-column-start: 2;
+//   grid-column-end: 3;
+// }
