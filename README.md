@@ -1,5 +1,3 @@
-# indecision
+# Random Tabata
 
-udemy react project
-
-build part of webpack needs addressing!
+A Randomized Tabata timer made with React.js.
