@@ -16,7 +16,7 @@ const OptionModal = (props) => (
     {
       props.time > 245 ?
       <div className = "grid">
-        <button className="modal__exit"  onClick={props.exitModal}>X</button>
+        <span className="modal__exit" onClick={props.exitModal}>X</span>
         <p className="modal__title">Random Tabata has selected</p>
         <p className="modal__first-set">4 sets of {props.selectedOption}</p>
         <p className="modal__and">and</p>
@@ -25,7 +25,7 @@ const OptionModal = (props) => (
       :
       props.time > 240 ?
       <div className = "grid">
-        <button className="modal__exit"  onClick={props.exitModal}>X</button>
+        <span className="modal__exit" onClick={props.exitModal}>X</span>
         <Sound 
           url="audio/ready.mp3"
           playStatus={Sound.status.PLAYING}
@@ -37,7 +37,7 @@ const OptionModal = (props) => (
       props.time > 220 ?
       <div className = "grid">
       <p className = 'modal__set'>1/4</p> 
-      <button className="modal__exit"  onClick={props.exitModal}>X</button>
+      <span className="modal__exit" onClick={props.exitModal}>X</span>
         <Sound 
           url="audio/go.mp3"
           playStatus={Sound.status.PLAYING}
@@ -49,7 +49,7 @@ const OptionModal = (props) => (
       props.time > 210 ?
       <div className = "grid">
         <p className = 'modal__set'>1/7</p>
-        <button className="modal__exit"  onClick={props.exitModal}>X</button>
+        <span className="modal__exit" onClick={props.exitModal}>X</span>
         <p className="modal__body">Rest</p>
         <Rest />
       </div>
@@ -57,7 +57,7 @@ const OptionModal = (props) => (
       props.time > 190 ?
       <div className = "grid">
       <p className = 'modal__set'>1/4</p>  
-      <button className="modal__exit"  onClick={props.exitModal}>X</button>
+      <span className="modal__exit" onClick={props.exitModal}>X</span>
         <Sound 
           url="audio/go.mp3"
           playStatus={Sound.status.PLAYING}
@@ -69,7 +69,7 @@ const OptionModal = (props) => (
       props.time > 180 ?
       <div className = "grid">
         <p className = 'modal__set'>2/7</p>
-        <button className="modal__exit"  onClick={props.exitModal}>X</button>
+        <span className="modal__exit" onClick={props.exitModal}>X</span>
         <p className="modal__body">Rest</p>
         <Rest />
       </div>
@@ -77,7 +77,7 @@ const OptionModal = (props) => (
       props.time > 160 ?
       <div className = "grid">
       <p className = 'modal__set'>2/4</p>  
-      <button className="modal__exit"  onClick={props.exitModal}>X</button>
+      <span className="modal__exit" onClick={props.exitModal}>X</span>
         <Sound 
           url="audio/go.mp3"
           playStatus={Sound.status.PLAYING}
@@ -89,7 +89,7 @@ const OptionModal = (props) => (
       props.time > 150 ?
       <div className = "grid">
         <p className = 'modal__set'>3/7</p>
-        <button className="modal__exit"  onClick={props.exitModal}>X</button>
+        <span className="modal__exit" onClick={props.exitModal}>X</span>
         <p className="modal__body">Rest</p>
         <Rest />
       </div>
@@ -97,7 +97,7 @@ const OptionModal = (props) => (
       props.time > 130 ?
       <div className = "grid">
       <p className = 'modal__set'>2/4</p>  
-      <button className="modal__exit"  onClick={props.exitModal}>X</button>
+      <span className="modal__exit" onClick={props.exitModal}>X</span>
         <Sound 
           url="audio/go.mp3"
           playStatus={Sound.status.PLAYING}
@@ -109,7 +109,7 @@ const OptionModal = (props) => (
       props.time > 120 ?
       <div className = "grid">
         <p className = 'modal__set'>4/7</p>
-        <button className="modal__exit"  onClick={props.exitModal}>X</button>
+        <span className="modal__exit" onClick={props.exitModal}>X</span>
         <p className="modal__body">Rest</p>
         <Rest />
       </div>
@@ -117,7 +117,7 @@ const OptionModal = (props) => (
       props.time > 100 ?
       <div className = "grid">
       <p className = 'modal__set'>3/4</p>  
-      <button className="modal__exit"  onClick={props.exitModal}>X</button>
+      <span className="modal__exit" onClick={props.exitModal}>X</span
         <Sound 
           url="audio/go.mp3"
           playStatus={Sound.status.PLAYING}
@@ -129,7 +129,7 @@ const OptionModal = (props) => (
       props.time > 90 ?
       <div className = "grid">
         <p className = 'modal__set'>5/7</p>
-        <button className="modal__exit"  onClick={props.exitModal}>X</button>
+        <spanlassName="modal__exit" onClick={props.exitModal}>X</spspan
         <p className="modal__body">Rest</p>
         <Rest />
       </div>
@@ -137,7 +137,7 @@ const OptionModal = (props) => (
       props.time > 70 ?
       <div className = "grid">
       <p className = 'modal__set'>3/4</p>  
-      <button className="modal__exit"  onClick={props.exitModal}>X</button>
+      <spanlassName="modal__exit" onClick={props.exitModal}>X</spspan
         <Sound 
           url="audio/go.mp3"
           playStatus={Sound.status.PLAYING}
@@ -149,7 +149,7 @@ const OptionModal = (props) => (
       props.time > 60 ?
       <div className = "grid">
         <p className = 'modal__set'>6/7</p>
-        <button className="modal__exit"  onClick={props.exitModal}>X</button>
+        <spanlassName="modal__exit" onClick={props.exitModal}>X</spspan
         <p className="modal__body">Rest</p>
         <Rest />
       </div>
@@ -157,7 +157,7 @@ const OptionModal = (props) => (
       props.time > 40 ?
       <div className = "grid">
       <p className = 'modal__set'>4/4</p>  
-      <button className="modal__exit"  onClick={props.exitModal}>X</button>
+      <spanlassName="modal__exit" onClick={props.exitModal}>X</spspan
         <Sound 
           url="audio/go.mp3"
           playStatus={Sound.status.PLAYING}
@@ -169,7 +169,7 @@ const OptionModal = (props) => (
       props.time > 30 ?
       <div className = "grid">
         <p className = 'modal__set'>7/7</p>
-        <button className="modal__exit"  onClick={props.exitModal}>X</button>
+        <spanlassName="modal__exit" onClick={props.exitModal}>X</spspan
         <p className="modal__body">Rest</p>
         <Rest />
       </div>
@@ -177,7 +177,7 @@ const OptionModal = (props) => (
       props.time > 10 ?
       <div className = "grid">
       <p className = 'modal__set'>4/4</p>  
-      <button className="modal__exit"  onClick={props.exitModal}>X</button>
+      <spanlassName="modal__exit" onClick={props.exitModal}>X</spspan
         <Sound 
           url="audio/go.mp3"
           playStatus={Sound.status.PLAYING}
@@ -187,7 +187,7 @@ const OptionModal = (props) => (
       </div>
       :
       <div className = "grid">
-        <button className="modal__exit"  onClick={props.exitModal}>X</button>
+        <spanlassName="modal__exit" onClick={props.exitModal}>X</spspan
         <p className="modal__body">You have finished!</p>
       </div>}
   </Modal>
