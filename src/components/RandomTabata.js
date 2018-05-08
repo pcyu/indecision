@@ -56,7 +56,6 @@ class RandomTabata extends React.Component {
     } else if (option.split('').length > 20) {
       return 'Please limit the length of your exercise option to 20 characters.'
     }
-    
     this.setState((prevState) => ({options: prevState.options.concat(option)}));
   };
   componentDidMount() {

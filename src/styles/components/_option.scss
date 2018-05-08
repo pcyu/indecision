@@ -13,3 +13,13 @@
   word-break: break-all;
 }
 
+@media (min-width: $small-breakpoint) {
+  .option__text {
+    font-size: $m-size;
+  }
+}
+@media (min-width: $desktop-breakpoint) {
+  .option__text {
+    font-size: 2rem;
+  }
+}
