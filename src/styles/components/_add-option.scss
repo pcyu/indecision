@@ -13,8 +13,9 @@
 }
 
 .add-option__input {
-  background: $dark-blue;
+  background: $blue;
   border: none;
+  border-radius: 1rem;
   color: $off-white;
   border-bottom: .3rem solid darken($dark-blue, 10%);
   flex-grow: 1;
