@@ -4,7 +4,7 @@ import Options from './Options';
 import Header from './Header';
 import OptionModal from './OptionModal';
 
-class RandomTabata extends React.Component {
+class TabataShuffle extends React.Component {
   state = {
     options: [],
     selectedOption: undefined,
@@ -109,4 +109,4 @@ class RandomTabata extends React.Component {
   }
 }
 
-export default RandomTabata;
+export default TabataShuffle;
