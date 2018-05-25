@@ -2,7 +2,6 @@ import React from 'react';
 import AddOption from './AddOption';
 import Options from './Options';
 import Header from './Header';
-import Action from './Action';
 import OptionModal from './OptionModal';
 
 class RandomTabata extends React.Component {
@@ -85,12 +84,10 @@ class RandomTabata extends React.Component {
       <div>
         <Header subtitle={subtitle}/>
         <div className="container">
-          <Action 
-          hasOptions={this.state.options.length > 1}
-          handlePick={this.handlePick} 
-          />
           <AddOption 
             handleAddOption={this.handleAddOption}
+            hasOptions={this.state.options.length > 1}
+            handlePick={this.handlePick} 
             />
           <div className="widget">
             <Options 
