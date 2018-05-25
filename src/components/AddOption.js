@@ -21,13 +21,15 @@ export default class AddOption extends React.Component {
         <form className="add-option" onSubmit={this.handleAddOption}>
           <input className="add-option__input" type="text" name="option" autoComplete="off"/>
         </form>
-        <button className="button">Add Exercise</button>
+        <div className="button-container">
+          <button className="button">Add Exercise</button>
           <button id="begin-button" className="button" 
             onClick={this.props.handlePick}
             disabled={!this.props.hasOptions}
             > 
             Begin!
           </button>
+        </div>  
       </div>
     );
   }
