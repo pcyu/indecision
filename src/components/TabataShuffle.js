@@ -2,7 +2,6 @@ import React from 'react';
 import AddOption from './AddOption';
 import Options from './Options';
 import Header from './Header';
-import Action from './Action';
 import OptionModal from './OptionModal';
 
 class RandomTabata extends React.Component {
@@ -54,7 +53,7 @@ class RandomTabata extends React.Component {
     } else if (this.state.options.indexOf(option) > -1) {
       return 'This exercise already exists.';
     } else if (option.split('').length > 20) {
-      return 'Please limit the length of your exercise option to 20 characters.'
+      return 'Max 20 characters.'
     }
     this.setState((prevState) => ({options: prevState.options.concat(option)}));
   };
@@ -85,18 +84,16 @@ class RandomTabata extends React.Component {
       <div>
         <Header subtitle={subtitle}/>
         <div className="container">
-          <Action 
-          hasOptions={this.state.options.length > 1}
-          handlePick={this.handlePick} 
-          />
+          <AddOption 
+            handleAddOption={this.handleAddOption}
+            hasOptions={this.state.options.length > 1}
+            handlePick={this.handlePick} 
+            />
           <div className="widget">
             <Options 
             options={this.state.options}
             handleDeleteOptions={this.handleDeleteOptions}
             handleDeleteOption={this.handleDeleteOption}
-            />
-            <AddOption 
-            handleAddOption={this.handleAddOption}
             />
           </div>
         </div>
