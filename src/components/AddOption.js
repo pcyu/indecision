@@ -26,7 +26,7 @@ export default class AddOption extends React.Component {
               onClick={this.props.handlePick}
               disabled={!this.props.hasOptions}
               > 
-              Begin!
+              Start Timer
             </button>
           </div>  
         </form>
