@@ -86,7 +86,7 @@ class RandomTabata extends React.Component {
         <div className="container">
           <AddOption 
             handleAddOption={this.handleAddOption}
-            hasOptions={this.state.options.length > 3}
+            hasOptions={this.state.options.length > 1}
             handlePick={this.handlePick} 
             />
           <div className="widget">
