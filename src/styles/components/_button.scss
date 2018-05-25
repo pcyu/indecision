@@ -19,8 +19,8 @@
   padding: 0;
 }
 
-// @media (min-width: $desktop-breakpoint) {
-//   .big-button {
-//     margin-bottom: $xl-size;
-//   }
-// }
+@media (min-width: $desktop-breakpoint) {
+  // .button {
+  //   margin: 0 $s-size;
+  // }
+}
