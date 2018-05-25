@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import RandomTabata from './components/RandomTabata';
+import TabataShuffle from './components/TabataShuffle';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 
-ReactDOM.render(<RandomTabata />, document.getElementById('app'));
+ReactDOM.render(<TabataShuffle />, document.getElementById('app'));
