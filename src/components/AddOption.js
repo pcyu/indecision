@@ -22,8 +22,8 @@ export default class AddOption extends React.Component {
           <input className="add-option__input" type="text" name="option" autoComplete="off"/>
         </form>
         <div className="button-container">
-          <button className="button">Add Exercise</button>
-          <button id="begin-button" className="button" 
+          <button className="button button--input">Add Exercise</button>
+          <button id="begin-button" className="button button--input" 
             onClick={this.props.handlePick}
             disabled={!this.props.hasOptions}
             > 
